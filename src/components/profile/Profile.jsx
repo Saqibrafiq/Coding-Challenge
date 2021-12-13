@@ -14,7 +14,7 @@ const Profile = () => {
         fetch('https://jsonplaceholder.typicode.com/error')
           .then(res => {
             if(!res.ok){
-              throw Error('could not fetch');
+              window.location.href = "http://localhost:3000/error";
           }
           return res.json();
         })
